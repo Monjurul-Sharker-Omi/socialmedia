@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2021 at 03:47 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Generation Time: Jan 05, 2022 at 06:06 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -126,9 +126,7 @@ INSERT INTO `likes` (`id`, `username`, `post_id`) VALUES
 (332, 'tasnim_hoque', 114),
 (338, 'monjurul_omi', 120),
 (343, 'tasnim_hoque', 123),
-(344, 'monjurul_omi', 121),
 (347, 'monjurul_omi', 123),
-(350, 'monjurul_omi', 116),
 (352, 'tasnim_hoque', 137),
 (355, 'sadab_mostafa', 115),
 (356, 'tasnim_hoque', 140);
@@ -214,11 +212,8 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `body`, `added_by`, `user_to`, `date_added`, `user_closed`, `deleted`, `likes`, `image`, `original_user`, `original_post_id`) VALUES
-(115, 'hello,world!', 'tasnim_hoque', 0, '2021-01-05 03:11:51', 'no', 'no', 2, '', 'none', -1),
-(116, 'hello,world!', 'monjurul_omi', 0, '2021-01-05 03:12:08', 'no', 'no', 1, '', 'tasnim_hoque', 115),
-(121, '1', 'tasnim_hoque', 0, '2021-01-05 13:17:55', 'no', 'no', 1, '', 'none', -1),
-(140, 'hey', 'monjurul_omi', 0, '2021-04-12 18:33:57', 'no', 'no', 1, '../assests/images/posts/60743e3512cc0a.jpg', 'none', -1),
-(145, 'hey', 'tasnim_hoque', 0, '2021-04-13 18:52:03', 'no', 'no', 0, '../assests/images/posts/60743e3512cc0a.jpg', 'monjurul_omi', 140);
+(140, 'hey', 'monjurul_omi', 0, '2021-12-27 18:33:57', 'no', 'no', 1, '../assests/images/posts/60743e3512cc0a.jpg', 'none', -1),
+(145, 'hey', 'tasnim_hoque', 0, '2021-04-28 18:52:03', 'no', 'no', 0, '../assests/images/posts/60743e3512cc0a.jpg', 'monjurul_omi', 140);
 
 -- --------------------------------------------------------
 
@@ -246,11 +241,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password`, `signup_date`, `profile_pic`, `num_posts`, `num_likes`, `user_closed`, `friend_array`) VALUES
-(15, 'Monjurul', 'Omi', 'monjurul_omi', 'monjurulomi@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2020-12-26', '../assests/images/profile_pics/defaults/three.jpg', 43, 84, 'no', ',tasnim_hoque,'),
-(16, 'Tasnim', 'Hoque', 'tasnim_hoque', 'Tasnim33@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2020-12-26', '../assests/images/profile_pics/defaults/two.jpg', 5, 27, 'no', ',faria_mitu,monjurul_omi,'),
-(17, 'Faria', 'Mitu', 'faria_mitu', 'Fariamitu@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2020-12-26', '../assests/images/profile_pics/defaults/one.jpg', 3, 1, 'no', ',tasnim_hoque,'),
-(18, 'Wasy', 'Tabassum', 'wasy_tabassum', 'Wasy@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2020-12-29', '../assests/images/profile_pics/defaults/two.jpg', 0, 0, 'no', ','),
-(23, 'Noshu', 'Pro', 'noshu_pro', 'Noshupro69@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2021-04-12', '../assests/images/profile_pics/defaults/two.jpg', 0, 0, 'no', ',');
+(15, 'Monjurul', 'Omi', 'monjurul_omi', 'monjurulomi@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2021-12-26', '../assests/images/profile_pics/defaults/three.jpg', 43, 83, 'no', ',tasnim_hoque,'),
+(16, 'Tasnim', 'Hoque', 'tasnim_hoque', 'Tasnim33@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2021-12-26', '../assests/images/profile_pics/defaults/two.jpg', 5, 26, 'no', ',faria_mitu,monjurul_omi,'),
+(17, 'Faria', 'Mitu', 'faria_mitu', 'Fariamitu@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2021-12-26', '../assests/images/profile_pics/defaults/one.jpg', 3, 1, 'no', ',tasnim_hoque,'),
+(18, 'Wasy', 'Tabassum', 'wasy_tabassum', 'Wasy@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2021-12-29', '../assests/images/profile_pics/defaults/two.jpg', 0, 0, 'no', ','),
+(23, 'Noshu', 'Pro', 'noshu_pro', 'Noshupro69@gmail.com', '41dc32b6d6d8c3fb6b56e949d36909a7', '2021-12-12', '../assests/images/profile_pics/defaults/two.jpg', 0, 0, 'no', ',');
 
 --
 -- Indexes for dumped tables
